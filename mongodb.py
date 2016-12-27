@@ -43,6 +43,7 @@ def show_collections():
             elif num == 999:
                 sys.exit(0)
 
+
 if __name__ == '__main__':
     show_collections()
 
