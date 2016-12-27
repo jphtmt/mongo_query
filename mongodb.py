@@ -12,8 +12,8 @@ def show_collections():
                 print "%i.%s  " % (i + 1, client.database_names()[i])
             num = int(raw_input("选择一个database,返回上一步输入 0，退出输入 999："))
             if num != 0 and num != 999:
+                db = client[client.database_names()[num - 1]]
                 while 1:
-                    db = client[client.database_names()[num-1]]
                     print "Document:"
                     for i in range(len(db.collection_names())):
                         print "%i.%s  " % (i + 1, db.collection_names()[i])
